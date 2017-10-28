@@ -647,8 +647,8 @@ class InstagramAPI:
         })
         return self.SendRequest('accounts/edit_profile/', self.generateSignature(data))
 
-    def getStory(self, ID):
-        return self.SendRequest('feed/user/' + str(ID) + '/reel_media/')
+    def getStory(self, usernameId):
+        return self.SendRequest('feed/user/' + str(usernameId) + '/reel_media/')
 
     def getUsernameInfo(self, usernameId):
         return self.SendRequest('users/'+ str(usernameId) +'/info/')
